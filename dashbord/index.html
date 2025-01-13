@@ -1,0 +1,306 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Bootstrap demo</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+    <script src="https://cdn.syncfusion.com/ej2/dist/ej2.min.js" type="text/javascript"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Chart.js/2.9.4/Chart.js"></script>
+
+  </head>
+  <body>
+    <div class="c1">
+      <!-- Sidebar -->
+      <div class="sidebar">
+        <div class="header">
+          <div class="list-item text-center">
+            <a href="#" > 
+              <span class="description-header text-white ">JUDUL DASHBOARD</span>
+            </a>
+          </div>
+
+          <div id="btn-menu">
+            <input type="checkbox" id="menu-checkbox">
+            <label for="menu-checkbox" id="menu-label"></label>
+            <div id="hamburger"></div>
+        </div>
+        </div>
+        
+        <div class="illustration">
+          <img src="logopt.png" alt="Logo" width="100%" >
+        </div>
+
+        <div class="main-content">
+          <div class="list-item">
+            <i class="bi bi-house-add-fill i1"></i>
+            <span class="description"> Dashboard</span>
+          </div>
+          <hr>
+          <div class="list-item">
+            <i class="bi bi-speedometer2 i1"></i>
+            <span class="description">judul db 2</span>
+          </div>
+          <hr>
+          <div class="list-item">
+            <i class="bi bi-speedometer2 i1"></i>
+            <span class="description">db 3</span>
+          </div>
+          <hr>
+          <div class="list-item">
+            <i class="bi bi-speedometer2 i1"></i>
+            <span class="description">db 4</span>
+          </div>
+          <hr>
+          <div class="list-item">
+            <button type="submit" style="border: none; background: none; color: inherit; cursor: pointer;">
+              <i class="bi bi-speedometer2 i1"></i>
+              <span class="description">Logout</span>
+            </button>
+          </div>
+          <hr>
+        </div>
+      </div>
+      <!-- End Sidebar -->
+
+      <!-- navbar -->
+      <div class="main">
+        <nav class="navbar navbar-expand-lg ">
+            <div class="container-fluid mt-2">
+              <a class="navbar-brand" href="#"><h4 class="text-white">DASHBOARD</h4></a>
+                <form class="d-flex" role="search">
+                    <input class="form-control me-2" type="search" placeholder="Search" aria-label="Search">
+                    <button class="btn btn-danger" type="submit">Search</button>
+                </form>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarScroll" aria-controls="navbarScroll" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="collapse navbar-collapse" id="navbarScroll">
+                    <ul class="navbar-nav ms-auto">
+                        <li class="nav-item dropdown">
+                            <a class="nav-link dropdown-toggle text-white" href="#" role="button" data-bs-toggle="dropdown" aria-expanded="false">
+                                Profile
+                            </a>
+                            <ul class="dropdown-menu dropdown-menu-end">
+                                <li><a class="dropdown-item" href="#">Akun</a></li>
+                                <li><a class="dropdown-item" href="#">Pengaturan</a></li>
+                                <li><a class="dropdown-item" href="#">Logout</a></li>
+                            </ul>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+        <!-- end navbar -->
+
+        <!-- awal card -->
+         <div class="pp2">
+          <div class="pp1 m-2 mt-4">
+            <div class="card-container p-4 mt-2">
+            <div class="cc1 card">
+              <div class="card-body">
+                <div class="">
+                  <h4>Management Aset</h4>
+                  <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Tempore, iusto.</p>
+                </div>
+                <div class="container text-center mt-4 ">
+                  <div class="row">
+                    <div class="col">
+                      <div class="c4 cc card">
+                        <div class="card-body">
+                          card 1
+                          <p class="card-text">1</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="c4 cc card">
+                        <div class="card-body">
+                          card 3
+                          <p class="card-text">3</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="c4 cc card">
+                        <div class="card-body">
+                          card 3
+                          <p class="card-text">3</p>
+                        </div>
+                      </div>
+                    </div>
+                    <div class="col">
+                      <div class="c4 cc card">
+                        <div class="card-body">
+                          card 3
+                          <p class="card-text">3</p>
+                        </div>
+                      </div>
+                    </div>
+              
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+              <!-- End Cards -->
+    
+              <!-- card kedua -->
+              <div class=" ms-2 mt-4 p-2">
+              <div class="container ">
+                <div class="row">
+                  <div class="col">
+                    <div class="ccc card">
+                      <div class="card-body">
+                        <canvas id="myChart"></canvas>
+                      </div>
+                    </div>
+                  </div>
+                  <div class="col">
+                    <div class="col">
+                      <div class="ccc card">
+                        <div class="card-body">
+                          <div id="container">
+    
+                          </div>
+                        </div>
+                      </div>
+                    </div>
+                  </div>
+              
+                </div>
+              </div>
+              </div>
+              <!-- end card -->
+    
+              <!-- card ketiga -->
+              <div class="ct1 container text-center">
+                <div class="row">
+                  <div class="col-8">
+                    <div class="p-3">
+                      <div class="cb1 card ">
+                          <div class="card-body">
+                            ini oeta
+                          </div>
+                        </div>
+                  </div>
+                  </div>
+                  <div class="col-4">
+                    <div class="p-3">
+                      <div class="cc2 cb1 card p-3">
+                        <div class="card-body">
+                          <table class="table-responsive">
+                            <thead>
+                              <tr>
+                                <th scope="col">#</th>
+                                <th scope="col">First</th>
+                                <th scope="col">Last</th>
+                                <th scope="col">Handle</th>
+                              </tr>
+                            </thead>
+                            <tbody>
+                              <tr>
+                                <th scope="row">1</th>
+                                <td>Mark</td>
+                                <td>Otto</td>
+                                <td>@mdo</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">2</th>
+                                <td>Jacob</td>
+                                <td>Thornton</td>
+                                <td>@fat</td>
+                              </tr>
+                              <tr>
+                                <th scope="row">3</th>
+                                <td colspan="2">Larry the Bird</td>
+                                <td>@twitter</td>
+                              </tr>
+                            </tbody>
+                          </table>
+                        </div>
+                      </div>
+                    </div>
+                    
+                  </div>
+                </div>
+              </div>
+         </div>
+
+          <!-- end card ketiga -->
+
+          <!-- Card Table -->
+
+      </div>
+      <!-- End Main Content -->
+    </div>
+
+    <script>
+ 
+        var chart = new ej.charts.Chart({
+            tooltip: {enable: true},
+            primaryXAxis: {
+                valueType: 'Category',
+                title: 'Countries',
+            },
+            //Initializing Primary Y Axis
+             primaryYAxis: {
+                title: 'Medals in number'
+            },
+ 
+            //Initializing Chart Series
+            series: [
+                {
+                    type: 'Column',
+                    dataSource: [
+                        { country: "USA", medal: 50 },
+                        { country: "China", medal: 40 },
+                        { country: "Japan", medal: 70 },
+                        { country: "Australia", medal: 60 },
+                        { country: "France", medal: 30 },
+                    ],
+                    xName: 'country',
+                    yName: 'medal',
+                }
+            ],
+            
+        });
+        chart.appendTo('#container');
+    </script>
+
+<script>
+  const xValues = ["Italy", "France", "Spain", "USA", "Argentina"];
+  const yValues = [55, 49, 44, 24, 15];
+  const barColors = [
+    "#b91d47",
+    "#00aba9",
+    "#2b5797",
+    "#e8c3b9",
+    "#1e7145"
+  ];
+  
+  new Chart("myChart", {
+    type: "doughnut",
+    data: {
+      labels: xValues,
+      datasets: [{
+        backgroundColor: barColors,
+        data: yValues
+      }]
+    },
+    options: {
+      title: {
+        display: true,
+        text: "GRAFIK APSLS BRBBAS"
+      }
+    }
+  });
+  </script>
+ 
+   <script src="sidebar.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  </body>
+</html>

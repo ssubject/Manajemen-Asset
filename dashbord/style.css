@@ -1,0 +1,270 @@
+
+.c1 {
+    display: flex;
+    min-height: 100vh;
+}
+
+.main {
+    background-color: rgb(245, 247, 248);
+    flex-grow: 1;
+}
+
+.sidebar {
+    background-color: rgb(79, 117, 255);
+    width: 250px;
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+    transition: all 0.3s ease;
+    overflow: hidden;
+    transition: all ease-in .3s;
+}
+
+.sidebar.hide{
+    width: 87px;
+    transition: all ease-out .3s;
+}
+
+.sidebar a {
+    text-decoration: none;
+}
+
+.sidebar .description-header {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 60px;
+    text-align: center;
+    background-color: rgb(79, 117, 255);
+    white-space: nowrap;
+    color: white;
+}
+
+.sidebar.hide .description-header{
+    display: none;
+}
+
+.sidebar .illustration {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    padding: 10px;
+    margin: 10px 0 22px 0;
+    box-sizing: border-box;
+}
+
+.sidebar.hide .illustration{
+    display: none;
+}
+
+.sidebar .main-content .list-item {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    padding: 12px 10px;
+    border-radius: 8px;
+    transition: all ease-in 0.2s;
+}
+
+.sidebar.hide .main-content .list-item .description {
+    display: none;
+}
+
+
+.sidebar .main-content .list-item:hover {
+    background: rgb(204, 43, 82);
+    transition: all ease-in 0.2s;
+}
+
+.sidebar .main-content .list-item .i1 {
+    margin-right: 12px;
+    color: white;
+}
+
+.description {
+    font-style: normal;
+    font-weight: 900;
+    font-size: 14px;
+    line-height: 17px;
+    text-align: center;
+    color: white;
+}
+
+
+@media (max-width: 768px) {
+    .sidebar {
+        padding: 5px;
+    }
+}
+
+
+.navbar {
+    background-color: rgb(79, 117, 255);
+    padding: 12px;
+}
+
+.dropdown-menu {
+    right: 0;
+    left: auto;
+}
+
+
+.card-container {
+    display: flex;
+    justify-content: center;
+    padding: 8px;
+}
+
+.cc, .ccc, .cb1 {
+    border-radius: 15px;
+    box-shadow: 0 5px 9px rgb(0, 0, 0, 0.1);
+    padding: 20px;
+    width: 100%;
+    box-sizing: border-box;
+}
+
+.cc {
+    width: 150px;
+    padding: 5px;
+}
+
+.cb1 {
+    border-radius: 15px;
+}
+
+.cc1 {
+    height: 245px;
+    pading: 10px;
+    border-radius: 17px;
+}
+
+#container, #myChart {
+    width: 300px;
+    height: 200px;
+    margin: auto;
+}
+
+.pp2 {
+    overflow-y: auto;
+    height: 100vh;
+}
+
+/* .toggle-btn {
+    position: absolute;
+    top: 80px;
+    left: 230px;
+    background-color: rgb(79, 117, 255);
+    color: white;
+    border: none;
+    border-radius: 50%;
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 1000;
+} */
+
+
+@media (max-width: 768px) {
+    .toggle-btn {
+        left: 180px; 
+    }
+}
+
+
+.sidebar.collapsed {
+    width: 0;
+    padding: 0;
+}
+.main {
+    transition: margin-left 0.3s ease;
+}
+
+.ccc:hover, .cb1:hover, .cc:hover {
+    transform: scale(1.05);
+    transition: all 0.2s ease-in-out;
+}
+.pp2 {
+    scrollbar-width: thin;
+    scrollbar-color: #ccc #f4f4f4;
+}
+
+.pp2::-webkit-scrollbar-thumb {
+    background-color: #888;
+    border-radius: 10px;
+}
+
+.sidebar {
+    background: linear-gradient(180deg, rgba(79, 117, 255, 1) 0%, rgba(60, 90, 200, 1) 100%);
+}
+
+#btn-menu {
+    width: 32px;
+    position: absolute;
+    top: 10px;
+    left: 210px; 
+    padding: 5px 10px;
+    cursor: pointer;
+    z-index: 1000;
+    transition: left 0.3s ease; 
+}
+
+
+#menu-label {
+    position: relative;
+    display: block;
+    width: 32px;
+    height: 24px;
+    cursor: pointer;
+}
+
+#menu-checkbox {
+    display: none; 
+}
+
+#hamburger {
+    position: relative;
+    width: 32px;
+    height: 4px;
+    background-color:rgb(48, 50, 55);
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+#hamburger::before,
+#hamburger::after {
+    content: '';
+    position: absolute;
+    width: 32px;
+    height: 4px;
+    background-color: #111827;
+    border-radius: 2px;
+    transition: all 0.3s ease;
+}
+
+#hamburger::before {
+    top: -10px; 
+}
+
+#hamburger::after {
+    top: 10px; 
+}
+
+
+#menu-checkbox:checked + #menu-label #hamburger {
+    background-color: transparent; 
+}
+
+#menu-checkbox:checked + #menu-label #hamburger::before {
+    transform: rotate(45deg);
+    top: 0;
+}
+
+#menu-checkbox:checked + #menu-label #hamburger::after {
+    transform: rotate(-45deg);
+    top: 0;
+}
+
+.sidebar.hide + #btn-menu {
+    left: 60px;
+}
